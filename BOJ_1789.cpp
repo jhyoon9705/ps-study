@@ -1,11 +1,12 @@
+// BOJ_1789 (https://www.acmicpc.net/problem/1789)
 #include <bits/stdc++.h>
 
 using namespace std;
 
-int s;
-int idx = 1;
+long long s;
+long long idx = 1;
 
-void main() {
+int main() {
 	cin >> s;
 
 	while (s >= idx) {
@@ -14,7 +15,5 @@ void main() {
 	}
 	
 	idx -= 1;
-
 	cout << idx;
-	
 }
