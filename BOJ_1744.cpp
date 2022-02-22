@@ -1,4 +1,4 @@
-// BOJ_1744(¼ö ¹­±â) (https://www.acmicpc.net/problem/1744)
+ï»¿// BOJ_1744(Â¼Ã¶ Â¹Â­Â±Ã¢) (https://www.acmicpc.net/problem/1744)
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -11,15 +11,15 @@ int solve() {
 	sort(positive.begin(), positive.end(), greater<int>());
 	sort(negative.begin(), negative.end());
 
-	for (unsigned i = 0; i < positive.size() - (positive.size()%2); i += 2) {
+	for (unsigned i = 0; i < positive.size() - (positive.size() % 2); i += 2) {
 		result += positive[i] * positive[i + 1];
-	
+
 	}
 	if (positive.size() % 2 == 1) {
 		result += positive.back();
 	}
 
-	for (unsigned i = 0; i < negative.size() - (negative.size()%2); i += 2) {
+	for (unsigned i = 0; i < negative.size() - (negative.size() % 2); i += 2) {
 		result += negative[i] * negative[i + 1];
 
 	}
