@@ -16,7 +16,7 @@ void BFS(int v) {
 		v = q.front();
 		q.pop();
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i <= n; i++) {
 			if (arr[v][i] == 1 && visited[i] == false) {
 				visited[i] = true;
 				q.push(i);
@@ -43,6 +43,5 @@ int main() {
 
 	if (depth[tY] == 0) cout << -1 << endl;
 	else cout << depth[tY] << endl;
-
 
 }
