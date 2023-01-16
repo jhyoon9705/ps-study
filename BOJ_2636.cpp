@@ -53,4 +53,4 @@ int main() {
 	}
 	cout << cnt1 << '\n' << cnt2 << '\n';
 	return 0;
-}
+} 
