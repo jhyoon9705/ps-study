@@ -1,3 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int dp[100002];
+int n, k, w, v;
+
+int main() {
+	cin >> n >> k;
+	for (int i = 0; i < n; i++) {
+		cin >> w >> v;
+		for (int j = k; j >= w; j--) {
+			dp[j] = max(dp[j], dp[j - w] + v);
+		}
+	}
+	cout << dp[k] << "\n";
+	return 0;
+}
+
+/*
 // 0-1 knapsack
 #include <bits/stdc++.h>
 
@@ -30,3 +49,4 @@ int main() {
 	cout << arr[n][k];
 	return 0;
 }
+*/

@@ -1,4 +1,27 @@
 #include <bits/stdc++.h>
+using namespace std;
+
+int n;
+int strength[101], happy[101], dp[101];
+
+int main() {
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> strength[i];
+	}
+	for (int i = 0; i < n; i++) {
+		cin >> happy[i];
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 100; j > strength[i]; j--) {
+			dp[j] = max(dp[j], dp[j - strength[i]] + happy[i]);
+		}
+	}
+	cout << dp[100] << "\n";
+	return 0;
+}
+
+/* #include <bits/stdc++.h>
 
 using namespace std;
 
@@ -36,4 +59,4 @@ int main() {
 
 	cout << answer;
 	return 0;
-}
+}*/
